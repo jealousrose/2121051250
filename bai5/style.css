@@ -1,0 +1,42 @@
+body {
+    margin: 0;          /* full chiều cao màn hình */
+    display: flex;
+    justify-content: center;    /* căn giữa ngang */
+    align-items: center;        /* căn giữa dọc */
+}
+
+nav{
+    background-color: #0c4ca3;
+    
+
+}
+ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+li{
+    padding: 10px;
+}
+border{
+    border-right:1px solid gray ;
+}
+
+.danhmuc-lienket{
+    color: white;
+    text-decoration: none;
+    font-family: Roboto, Arial, Tahoma;
+
+}
+.banner-qc{
+    display: flex;
+    justify-content: center;
+}
+
+.qc{
+    display: flex;
+    justify-content: space-between;
+}
+header{
+    border-bottom: 15px solid #f1f1f2;
+}
