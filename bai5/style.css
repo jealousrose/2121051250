@@ -1,42 +1,480 @@
 body {
-    margin: 0;          /* full chiều cao màn hình */
-    display: flex;
-    justify-content: center;    /* căn giữa ngang */
-    align-items: center;        /* căn giữa dọc */
+    margin: 0;
+    font-family: Roboto, Arial, Tahoma;
 }
 
-nav{
+nav {
     background-color: #0c4ca3;
-    
-
 }
-ul{
+
+ul {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
     justify-content: center;
 }
-li{
+
+li {
     padding: 10px;
 }
-border{
-    border-right:1px solid gray ;
+
+.border {
+    border-right: 1px solid gray;
 }
 
-.danhmuc-lienket{
+.danhmuc-lienket {
     color: white;
     text-decoration: none;
-    font-family: Roboto, Arial, Tahoma;
-
 }
-.banner-qc{
+
+.banner-qc {
     display: flex;
     justify-content: center;
 }
 
-.qc{
+.qc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+header {
+    border-bottom: 15px solid #f1f1f2;
+}
+
+.tintuc {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tintuc h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    color: #0c4ca3;
+}
+
+.tintuc-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.tintuc-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.2s ease;
+}
+
+.tintuc-item:hover {
+    transform: translateY(-5px);
+}
+
+.tintuc-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tintuc-item h3 {
+    font-size: 16px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.lienket {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 20px 0;
+    background: #fff;
 }
-header{
-    border-bottom: 15px solid #f1f1f2;
+
+.lienket-list {
+    display: flex;
+    gap: 10px;
+}
+
+.lienket-item {
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #fafafa;
+    width: 140px;
+}
+
+.lienket-item img {
+    width: 100%;
+    height: 60px;
+    object-fit: cover;
+    display: block;
+}
+
+.lienket-website {
+    border: 1px solid #ddd;
+    padding: 5px;
+    background: #fafafa;
+}
+
+.lienket-website label {
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.lienket-website select {
+    width: 160px;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.thongbao {
+    padding: 20px;
+    background: #f9f9f9;
+    margin: 20px 0;
+}
+
+.thongbao h2 {
+    color: #0c4ca3;
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #0c4ca3;
+    display: inline-block;
+    padding-bottom: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.thongbao-content {
+    display: flex;
+    gap: 20px;
+}
+
+.thongbao-left {
+    width: 30%;
+    text-align: center;
+}
+
+.thongbao-left img {
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.thongbao-left p {
+    font-size: 14px;
+    color: #333;
+}
+
+.thongbao-right {
+    width: 70%;
+}
+
+.thongbao-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.thongbao-right ul li {
+    margin-bottom: 8px;
+}
+
+.thongbao-right ul li a {
+    color: #0c4ca3;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.thongbao-right ul li a:hover {
+    text-decoration: underline;
+}
+
+.xemthem {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+    color: #666;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/* ==== THÔNG TIN TUYỂN SINH ==== */
+.tuyensinh {
+    margin: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.tuyensinh-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #0c4ca3;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+.tuyensinh-header h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0c4ca3;
+    margin: 0;
+}
+
+.tuyensinh-header a {
+    font-size: 13px;
+    color: #666;
+    text-decoration: none;
+}
+
+.tuyensinh-header a:hover {
+    color: #0c4ca3;
+    text-decoration: underline;
+}
+
+.tuyensinh-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.tuyensinh-item {
+    width: 23%;
+    text-align: left;
+}
+
+.tuyensinh-item img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    background: url("no_image.png") center/contain no-repeat;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tuyensinh-item img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.tuyensinh-item p {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+}
+
+/* ==== HOẠT ĐỘNG SINH VIÊN ==== */
+.sinhvien {
+    margin: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.sinhvien-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #0c4ca3;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+.sinhvien-header h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0c4ca3;
+    margin: 0;
+}
+
+.sinhvien-header a {
+    font-size: 13px;
+    color: #666;
+    text-decoration: none;
+}
+
+.sinhvien-header a:hover {
+    color: #0c4ca3;
+    text-decoration: underline;
+}
+
+.sinhvien-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.sinhvien-item {
+    width: 23%;
+    text-align: left;
+}
+
+.sinhvien-item img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    background: url("no_image.png") center/contain no-repeat;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sinhvien-item img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.sinhvien-item p {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.partners {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fff;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #003366;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #007bff;
+  margin: 8px auto 0;
+}
+
+.partners-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.partner-item {
+  width: 150px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.partner-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.partner-item:hover {
+  transform: scale(1.1);
+}
+
+.media-section {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+  flex-wrap: wrap; /* responsive */
+}
+
+.video-container {
+  flex: 2; /* chiếm 2/3 chiều rộng */
+}
+
+.video-container h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.media-list {
+  flex: 1; /* chiếm 1/3 chiều rộng */
+  background-color: #111;
+  color: #fff;
+  padding: 15px;
+}
+
+.media-list h3 {
+  margin-top: 0;
+  font-size: 16px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+}
+
+.media-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.media-list ul li {
+  border-bottom: 1px dashed #444;
+  margin-bottom: 8px;
+}
+
+.media-list ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.media-list ul li a:hover {
+  text-decoration: underline;
+}
+
+footer {
+    background-color: #004aad;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .footer-map img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+footer .footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+footer .footer-social img {
+    width: 32px;
+    height: 32px;
+}
+
+footer .footer-contact p {
+    margin: 5px 0;
+    font-size: 14px;
 }
