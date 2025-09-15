@@ -1,0 +1,43 @@
+:root{
+  --bg:#f2f2f6;
+  --card:#fff;
+  --muted:#6b6b6b;
+  --accent:#1877f2;
+  --green:#19a12b;
+  --input-border:#e0e0e2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  margin:0;
+  background:var(--bg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  padding:32px;
+}
+.logo{
+  font-weight:bold;
+  font-size:48px;
+  color:var(--accent);
+  margin-bottom:16px;
+}
+.card{
+  width:420px;
+  max-width:95%;
+  background:var(--card);
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  padding:20px 28px 28px;
+}
+.card h1{
+  margin:6px 0 2px;
+  font-size:22px;
+  text-align:center;
+}
+.card .sub{
+  margin:0 0 18px;
+  color:var(--muted);
+  text-align:center;
+  font-size:13px;
+}
