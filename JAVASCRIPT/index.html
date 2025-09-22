@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="script.js"></script>
+    <script>
+        // để viết chú thích js dùng ký tự//
+        document.writeln("hello world" + "<br>");
+
+        //javascript để nối chuỗi dùng dấu +
+        let hoTen = "Do Van Trung";
+        document.writeln(hoTen + "<br>");
+
+        // hằng ko the thay doi
+        const pi = 3.14;
+
+        let soThuNhat = 10;
+        let soThuHai = "10";
+        let ketQua = 0;
+        //+
+        ketQua = soThuNhat + soThuHai;
+        document.writeln(ketQua);
+
+        // -
+        ketQua = soThuNhat - soThuHai;
+        document.writeln(ketQua);
+
+        //*
+        ketQua = soThuNhat * soThuHai;
+        document.writeln(ketQua);
+
+        // /
+        ketQua = soThuNhat / soThuHai;
+        document.writeln(ketQua);
+
+        // % chia lấy phần dư
+        // ++ tăng thêm 1 đơn vị
+        // -- giảm đi 1 đơn vị
+
+        // phép gán += -= *= /=
+        soThuNhat += soThuHai;
+        //soThuNhat = soThuNhat + soThuHai
+        document.writeln(soThuNhat)
+        // so sanh
+        document.writeln(soThuNhat == soThuHai);
+        document.writeln(soThuNhat !== soThuHai);
+        document.writeln(!(soThuNhat !== soThuHai));
+        
+        let thongTinSinhVien = {
+            hoTen : "Do Van Trung",
+            tuoi: 20,
+            gioiTinh: true,
+            lop: "tin kinh te"
+        }
+        let diaChiTrung = {
+            thanhPho: "ha noi",
+            quanHuyen:"soc son",
+            duong:"16",
+            soNha:"40",
+        }
+        let namNay = 2025;
+        thongTinSinhVien.diaChi = diaChiTrung;
+        document.writeln("xin chao" + thongTinSinhVien.hoTen  + "so nha" + thongTinSinhVien.diaChi.soNha + "nam sinh" +(namNay - thongTinSinhVien.tuoi));
+
+        let soThuHai = "10";
+        soThuHaic = (soThuHai);
+        document.writeln(typeof (soThuHai));
+
+
+
+    </script>
+</body>
+</html>
