@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm chữ</title>
+</head>
+<body>
+    <h1>Tính điểm chữ</h1>
+    <h3>Công thức: A * 0.6 + B * 0.3 + C * 0.1</h3>
+
+    <div>
+        Nhập điểm A:
+        <input type="number" id="DiemA" step="0.1">
+    </div>
+    <div>
+        Nhập điểm B:
+        <input type="number" id="DiemB" step="0.1">
+    </div>
+    <div>
+        Nhập điểm C:
+        <input type="number" id="DiemC" step="0.1">
+    </div>
+    <div>
+        <button onclick="tinhDiemChu()">Tính tổng</button>
+    </div>
+    <div>
+        Kết quả: <input type="text" id="KetQua" >
+    </div>
+
+    <script>
+        function tinhDiemChu() {
+            let DiemA = parseFloat(document.getElementById('DiemA').value);
+            let DiemB = parseFloat(document.getElementById('DiemB').value);
+            let DiemC = parseFloat(document.getElementById('DiemC').value);
+
+            // Kiểm tra nếu chưa nhập đủ thì báo lỗi
+            if (isNaN(DiemA) || isNaN(DiemB) || isNaN(DiemC)) {
+                alert("Vui lòng nhập đầy đủ điểm A, B và C!");
+                return;
+            }
+
+            let tongDiem = DiemA * 0.6 + DiemB * 0.3 + DiemC * 0.1;
+            let diemChu = "";
+
+            if (tongDiem >= 9) {
+                diemChu = "A";
+            } else if (tongDiem >= 8) {
+                diemChu = "B";
+            } else if (tongDiem >= 7) {
+                diemChu = "C";
+            } else if (tongDiem >= 6) {
+                diemChu = "D";
+            } else {
+                diemChu = "F";
+            }
+
+            document.getElementById('KetQua').value = tongDiem + " (" + diemChu + ")";
+        }
+    </script>
+</body>
+</html>
