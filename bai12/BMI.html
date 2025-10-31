@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <img  class="hinhanh" width="300px" src="3.png" alt="">
+    </div>
+    <div>
+        nhap can nang: <input type="text" id="cannang"> kg
+    </div>
+    <div>
+        nhap chieu cao: <input type="text" id="chieucao"> m
+    </div>
+    <div>
+        <button onclick="tinhBMI()">tinh BMI</button>
+    </div>
+    <script>
+        function tinhBMI(){
+            let cannang = document.getElementById("cannang").value;
+            let chieucao = document.getElementById("chieucao").value;
+            let BMI = cannang / (chieucao * chieucao);
+            if(0<cannang && cannang == isNaN){
+                alert("vui long nhap can nang hop le");
+                return;
+            }
+            if(0<chieucao && chieucao == isNaN){
+                alert("vui long nhap chieu cao hop le");
+                return;
+            }   
+            document.writeln("chi so BMI cua ban la: " );
+            if(BMI < 18.5){
+                document.getElementsByClassName("anh")[0].src="1.png";
+                document.writeln("<br>ban thieu can");
+            }
+            else if(BMI >= 18.5 && BMI < 24.9){
+                document.getElementByIdsByClassName("anh")[0].src="2.png";
+                document.writeln("<br>ban co the luc khoe manh");
+            }
+            else if(BMI >= 25 && BMI < 29.9){
+                document.getElementsByClassName("anh")[0].src="4.png";
+                document.writeln("<br>ban thua can");   
+            }
+            else if(BMI >= 30 && BMI < 40  ){
+                document.getElementsByClassName("anh")[0].src="5.png";
+                document.writeln("<br>ban beo phi");
+            }
+            else{
+                document.getElementsByClassName("anh")[0].src="6.png";
+                document.writeln("<br>ban beo phi nang");
+            }
+        }
+    </script>
+</body>
+</html>
