@@ -1,42 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xem Phim Trực Tuyến | FPT Play Demo</title>
 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo img {
+      height: 45px;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f1c40f;
+    }
+
+    .actions {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .actions img {
+      height: 25px;
+      width: 25px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .actions img:hover {
+      transform: scale(1.2);
+    }
+
+    .actions a {
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid #f1c40f;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .actions a:hover {
+      background-color: #f1c40f;
+      color: #000;
+    }
+
+    /* BANNER */
+    .banner {
+      width: 100%;
+      height: 70vh;
+      background-image: url("muado.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      transition: background-image 0.5s ease-in-out;
+    }
+
+    .banner-overlay {
+      width: 100%;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      padding: 40px;
+    }
+
+    .banner-overlay h1 {
+      font-size: 2rem;
+      color: #fff;
+    }
+
+    .banner-overlay p {
+      font-size: 1rem;
+      color: #ddd;
+      margin-top: 5px;
+    }
+
+    /* MOVIE LIST */
+    .movie-section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .movie-section h2 {
+      font-size: 24px;
+      color: #f1c40f;
+      border-left: 5px solid #f1c40f;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    .movie-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .movie-item {
+      background-color: #1c1c1c;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .movie-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(241, 196, 15, 0.3);
+    }
+
+    .movie-item img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .movie-info {
+      padding: 10px;
+    }
+
+    .movie-info h3 {
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .movie-info p {
+      font-size: 14px;
+      color: #bbb;
+    }
+
+    footer {
+      text-align: center;
+      color: #aaa;
+      padding: 20px;
+      background-color: #1a1a1a;
+      margin-top: 40px;
+    }
+  </style>
 </head>
-<header>
-    <div class = "head-container">
-        <div class = "icon"><img src="logowebsite4x_1748221195181.png"></div>
-        <div class = "menu">
-            <div class = "item"><a href="#">trang chủ</a></div>
-            <div class = "item"><a href="#">Phim Bộ</a></div>
-            <div class = "item"><a href="#">V.league</a></div>
-            <div class = "item"><a href="#">Thiếu nhi</a></div>
-            <div class = "item"><a href="#">Xem Thêm</a></div>
-        </div>
 
-        <div class = "Login-menu">
-            <div class = "btn-search Login-item " ><img  src="search-hover.png" alt=""></div>
-            <div class = "btn-noti Login-item "><img src="icon-alarm-hover.png" alt=""></div>
-            <div class = "btn-payment Login-item "><a href="#">Mua gói</a></div>
-            <div class = "btn-login Login-item "><a href="#">Đăng Nhập</a></div>
-        </div>
-
-
-
-    </div>
-    
-</header>
 <body>
-    <div class ="container">
-        <div class = banner>
-            <div class = "top-banner"><img src="image.png" alt=""></div>    
-            <div class = "last-banner"><img src="Screenshot 2025-09-15 134615.png" alt=""></div>    
-        
-        
-        </div>
+  <header>
+    <div class="logo">
+      <img src="logowebsite4x_1748221195181.png" alt="FPT Play Logo">
     </div>
+
+    <nav>
+      <a href="#">Trang chủ</a>
+      <a href="#">Phim Bộ</a>
+      <a href="#">V.League</a>
+      <a href="#">Thiếu nhi</a>
+      <a href="#">Xem thêm</a>
+    </nav>
+
+    <div class="actions">
+      <img src="search-hover.png" alt="Tìm kiếm">
+      <img src="icon-alarm-hover.png" alt="Thông báo">
+      <a href="#">Mua gói</a>
+      <a href="#">Đăng nhập</a>
+    </div>
+  </header>
+
+  <div class="banner" id="banner">
+    <div class="banner-overlay">
+      <h1>FPT Play - Xem phim mọi lúc mọi nơi</h1>
+      <p>Trải nghiệm kho phim đa dạng và đặc sắc</p>
+    </div>
+  </div>
+
+  <section class="movie-section">
+    <h2>Phim nổi bật</h2>
+    <div class="movie-list" id="movieList"></div>
+  </section>
+
+  <footer>© 2025 FPT Play Demo. All rights reserved.</footer>
+
+  <script src="scrips.js"></script>
 </body>
 </html>
